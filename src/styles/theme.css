@@ -1,0 +1,125 @@
+:root {
+    --accent: #6366f1;
+    --accent-2: #a855f7;
+    --accent-3: #ec4899;
+    --radius: 16px;
+    --font-body: 'Source Han Serif SC', 'Noto Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
+    --font-display: 'Source Han Serif SC', 'Noto Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
+    --font-brand: 'STSong', 'Songti SC', 'Source Han Serif SC', 'Noto Serif SC', 'SimSun', 'Times New Roman', serif;
+    /* Global card & base background variables */
+    --card-bg: #ffffff;
+    --bg-color: #f5f7fa; /* base page background, used by hero waves */
+
+    /* Layout & structural */
+    --layout-max-width: 1180px;
+    --sidebar-width: 300px;
+    --header-height: 60px;
+    --hero-wave-height: 120px;
+    --wave-overlap: 4px;
+
+    /* Text colors */
+    --text-color: #1f2937; /* gray-800 */
+    --text-color-soft: #374151;
+
+    /* Accent animation (pagination / skeleton) */
+    --ani-accent: #8b5cf6;
+    --ani-accent-2: #ec4899;
+    --ani-shadow-rgb: 139 92 246; /* used as rgb components */
+    --ani-text-soft: #6b5e7d;
+    --ani-border: #e9d5ff;
+
+    /* Hero overlay & gradients */
+    --hero-overlay: linear-gradient(135deg, rgba(0,0,0,.35), rgba(0,0,0,.55));
+    --bg-gradient: linear-gradient(135deg, #f5f7fa, #e9ecf5 60%, #f5f7fa);
+    --bg-gradient-dark: radial-gradient(circle at 30% 20%, #1f2933, #11161d 60%, #0d1217);
+
+    /* Card shadows (light/dark sets; dark overrides in .dark) */
+    --shadow-card: 0 6px 22px -8px rgba(0,0,0,.15);
+    --shadow-card-dark: 0 8px 28px -10px rgba(0,0,0,.55);
+
+    /* Post placeholder gradient fallbacks */
+    --ph-from: #6366f1;
+    --ph-to: #8b5cf6;
+
+    --parallax: 0px; /* default scroll offset for hero */
+    --hero-img-pos: center center; /* default object-position for hero image */
+}
+
+.dark {
+    --accent: #818cf8;
+    /* Dark theme card/background */
+    --card-bg: #1b1f24;
+    --bg-color: #101317;
+
+    --text-color: #f1f5f9; /* near white */
+    --text-color-soft: #e2e8f0;
+
+    --ani-accent: #a855f7;
+    --ani-accent-2: #ec4899;
+    --ani-shadow-rgb: 168 85 247;
+    --ani-text-soft: #c4b8d6;
+    --ani-border: #553473;
+
+    --hero-overlay: linear-gradient(135deg, rgba(0,0,0,.55), rgba(0,0,0,.75));
+
+    /* Optional override for gradients */
+    --bg-gradient: radial-gradient(circle at 30% 20%, #232c36, #1a2129 60%, #12171d);
+    --bg-gradient-dark: radial-gradient(circle at 30% 20%, #1f2933, #11161d 60%, #0d1217); /* keep original */
+
+    /* Placeholder dark tweak */
+    --ph-from: #6366f1;
+    --ph-to: #ec4899;
+
+    --parallax: 0px; /* same default */
+    --hero-img-pos: center center;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.35rem;
+    box-shadow: 0 4px 14px -4px rgba(0, 0, 0, .08);
+    transition: background .3s, box-shadow .3s;
+}
+
+.dark .card {
+    box-shadow: 0 4px 22px -6px rgba(0, 0, 0, .55);
+}
+
+.link-accent {
+    color: var(--accent);
+    text-decoration: none;
+    position: relative;
+}
+
+.link-accent::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    transition: width .35s;
+}
+
+.link-accent:hover::after {
+    width: 100%;
+}
+
+.code-inline {
+    background: rgba(0, 0, 0, .06);
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: .85em;
+}
+
+.dark .code-inline {
+    background: rgba(255, 255, 255, .08);
+}

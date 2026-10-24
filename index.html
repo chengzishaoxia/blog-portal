@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Blog Portal</title>
+    <meta name="description" content="A minimal blog portal" />
+    <link rel="icon" type="image/svg+xml" href="/yuanshen-heng.svg" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" />
+    <!-- Meting 会自动初始化 APlayer -->
+    <script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+    <style>
+        /* 临时字体 & 过渡 (Shoka 风格灵感：清晰正文 + 动画淡入) */
+        html { font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; }
+        body { margin: 0; background: var(--bg-color,#f7f7f9); color: var(--text-color,#222); }
+        .fade-enter-active, .fade-leave-active { transition: opacity .3s ease; }
+        .fade-enter-from, .fade-leave-to { opacity: 0; }
+    </style>
+</head>
+<body>
+<div id="app"></div>
+<canvas class="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;"></canvas>
+<script type="module" src="/src/main.ts"></script>
+<script defer src="/autoload.js"></script>
+<script defer src="/fireworks.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    font-family: var(--font-body);
+    color: var(--text-color);
+    background: var(--bg-color);
+    cursor: url('../assets/cursor/rainbow_rain/normal.cur'), default;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: all .2s ease-in-out 0s;
+}
+
+a,
+button,
+img,
+[role="button"],
+.menu-btn,
+.link,
+.logout-btn {
+    cursor: url('../assets/cursor/rainbow_rain/link.cur'), default !important;
+}
+
+blockquote,
+code,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+input,
+li,
+p,
+td,
+textarea,
+th,
+text {
+    cursor: url('../assets/cursor/rainbow_rain/texto.cur'), auto;
+}
+
+::selection {
+    background: #6366f1;
+    color: #fff;
+}
+
+/* Scrollbar (webkit) */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#6366f1, #a855f7);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#4f46e5, #9333ea);
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .3s ease;
+}
+
+.fade-enter-from, .fade-leave-to {
+    opacity: 0;
+}
+
+.markdown-body pre, .markdown-body code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+.markdown-body pre {
+    background: var(--code-bg, #282c34);
+    color: #e6edf3;
+    padding: 1rem;
+    border-radius: 12px;
+    overflow: auto;
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+    position: relative;
+    scroll-margin-top: 90px;
+}
+
+.markdown-body h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+    border-radius: 4px;
+}
